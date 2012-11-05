@@ -1,0 +1,7 @@
+$ModLoad imudp
+$UDPServerRun 514
+
+$template SGLogs,"/var/log/rsyslog/%$YEAR%/%$MONTH%/%$DAY%/%HOSTNAME%/%programname%.log"
+*.* -?SGLogs
+
+
