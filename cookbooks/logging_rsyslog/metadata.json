@@ -1,0 +1,30 @@
+{
+  "name": "logging_rsyslog",
+  "description": "Deploys the UGF software to the environment",
+  "long_description": "",
+  "maintainer": "Cloud Infrastructure",
+  "maintainer_email": "csf@ultimatesoftware.com",
+  "license": "our license",
+  "platforms": {
+  },
+  "dependencies": {
+    "logging": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.0.1"
+}
