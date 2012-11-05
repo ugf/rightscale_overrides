@@ -20,10 +20,10 @@ ruby_block 'Fix configuration permissions' do
       File.open(config_file, 'w') { |f| f.puts(modified) }
     end
 
-    replace_text('$FileOwner syslog', '$FileOwner root')
-    replace_text('$FileGroup adm', '$FileGroup root')
-    replace_text('$PrivDropToUser syslog', '$PrivDropToUser root')
-    replace_text('$PrivDropToGroup syslog', '$PrivDropToGroup root')
+    replace_text('FileOwner syslog', 'FileOwner root')
+    replace_text('FileGroup adm', 'FileGroup root')
+    replace_text('PrivDropToUser syslog', 'PrivDropToUser root')
+    replace_text('PrivDropToGroup syslog', 'PrivDropToGroup root')
   end
 end
 
