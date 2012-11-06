@@ -25,6 +25,7 @@ ruby_block 'Fix configuration permissions' do
   end
 end
 
+log 'restarting rsyslog after fixing permissions'
 logging("default") { action :restart }
 
 rightscale_marker :end
