@@ -25,6 +25,7 @@ ruby_block 'Fix configuration permissions' do
     replace_text('PrivDropToUser syslog', 'PrivDropToUser root')
     replace_text('PrivDropToGroup syslog', 'PrivDropToGroup root')
   end
+  notifies :restart, resources(:service => "rsyslog"), :immediately
 end
 
 rightscale_marker :end
