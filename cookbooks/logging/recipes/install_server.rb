@@ -7,9 +7,7 @@
 
 rightscale_marker :begin
 
-logging "default" do
-  action :configure_server
-end
+logging("default") { action :configure_server }
 
 ruby_block 'Fix configuration permissions' do
   block do
@@ -25,7 +23,8 @@ ruby_block 'Fix configuration permissions' do
     replace_text('PrivDropToUser syslog', 'PrivDropToUser root')
     replace_text('PrivDropToGroup syslog', 'PrivDropToGroup root')
   end
-  notifies :restart, resources(:service => "rsyslog"), :immediately
 end
+
+logging("default") { action :restart }
 
 rightscale_marker :end
