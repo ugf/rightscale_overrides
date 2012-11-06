@@ -7,8 +7,6 @@
 
 rightscale_marker :begin
 
-logging("default") { action :configure_server }
-
 ruby_block 'Fix configuration permissions' do
   block do
     def replace_text(source, target)
@@ -25,7 +23,6 @@ ruby_block 'Fix configuration permissions' do
   end
 end
 
-log 'restarting rsyslog after fixing permissions'
-logging("default") { action :restart }
+logging("default") { action :configure_server }
 
 rightscale_marker :end
